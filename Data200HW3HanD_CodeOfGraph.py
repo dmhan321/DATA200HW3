@@ -11,19 +11,20 @@ df = pd.DataFrame(data)
 
 # group the dataframe by column 'City'
 df_city = df.groupby('City')
-print(df_city)
 # calculate average income by city
-average_income = df_city['Income'].mean()
+average_income = df_city['Income'].mean().reset_index(name='mean')
 
 # Graph: Bar Chart
 average_income.plot(kind='bar', figsize=(8,6))
+fig, ax = plt.subplots()
+ax.bar(average_income['City'], average_income['mean'] )
 
 # add labels and title
 plt.xlabel("City")
 plt.ylabel("Average Income")
 plt.title("Average Income per City")
 
-plt.show()
+st.pyplot(fig)
 
 
 # Visualize dataframe:
