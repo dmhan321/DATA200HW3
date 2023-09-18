@@ -26,6 +26,7 @@ plt.title("Average Income per City")
 
 st.pyplot(fig)
 
+st.write("'Mountain View has the highest average income for toys")
 
 # Visualize dataframe:
 st.subheader("Detailed Data View")
