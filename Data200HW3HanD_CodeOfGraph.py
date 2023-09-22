@@ -20,7 +20,7 @@ fig, ax = plt.subplots()
 ax.bar(average_income['City'], average_income['mean'] )
 
 # add labels and title
-plt.xlabel("City")
+plt.xlabel("City", rotation='vertical')
 plt.ylabel("Average Income")
 plt.title("Average Income per City")
 
