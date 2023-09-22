@@ -23,6 +23,7 @@ ax.bar(average_income['City'], average_income['mean'] )
 plt.xlabel("City", rotation='vertical')
 plt.ylabel("Average Income")
 plt.title("Average Income per City")
+plt.xticks(rotation=45)
 
 st.pyplot(fig)
 
